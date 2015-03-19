@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="A layout example that shows off a responsive product landing page.">
+
+    <title>linkREST &ndash; flexible model-driven REST data services protocol and framework</title>
+
+    
+
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="build/pure-min.css">
+
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="build/grids-responsive-old-ie-min.css">
+        <link rel="stylesheet" href="build/layout-old-ie-min.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="build/grids-responsive-min.css">
+        <link rel="stylesheet" href="build/layout-min.css">
+    <!--<![endif]-->
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <![endif]-->
+
+
+    <link rel="stylesheet" href="build/animate-min.css">
+
+</head>
+<body>
+
+
+
+    <!-- Main Nav -->
+    <div class="header">
+        <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
+            <div class="container">
+                <a class="pure-menu-heading" href="#">
+                    <img src="img/logo.png" alt="linkREST" />
+                </a>
+
+                <ul class="pure-menu-list">
+                    <!-- need to add .pure-menu-selected to `li` for `selected state` -->
+                    <li class="pure-menu-item"><a href="https://github.com/nhl/link-rest/wiki" class="pure-menu-link">Documentation</a></li>
+                    <li class="pure-menu-item"><a href="#" class="pure-menu-link">Examples</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Fork on GitHub -->
+        <a class="fork-on-github-btn" href="https://github.com/you"><img src="https://camo.githubusercontent.com/52760788cde945287fbb584134c4cbc2bc36f904/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f77686974655f6666666666662e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png"></a>
+
+    </div>
+
+    <!-- Promo block -->
+    <div class="promo-container">
+        <div class="promo">
+            <div class="pure-g">
+                <div class="pure-u-md-1-2">
+                    
+                </div>
+                <div class="pure-u-md-1-2" style="display:none;">
+                    <h3>Look at the code and try to experiment with it</h3>
+                    <pre>import org.glassfish.jersey.server.ResourceConfig;
+
+                    @ApplicationPath("/")
+                    public class MyApp extends ResourceConfig {
+
+                        public MyApp() {
+
+                            // Start Cayenne
+                            ServerRuntime cayenneRuntime  = new ServerRuntime("my-cayenne.xml");
+
+                            // Start LinkRest with default settings.
+                            // (check out LinkRestBuilder API for more configuration options)
+                            register(LinkRestBuilder.build(cayenneRuntime));
+                        }
+                    }</pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="splash-container">
+        <div class="splash">
+            <h1 class="splash-head">Big Bold Text</h1>
+            <p class="splash-subhead">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            </p>
+            <p>
+                <a href="http://purecss.io" class="pure-button pure-button-primary">Get Started</a>
+            </p>
+        </div>
+    </div> -->
+
+    <div class="content-wrapper">
+        
+        <!-- GET STARTED ICONS + TEXTUAL BLOCK -->
+        <div class="content container">
+            
+            <h2 class="content-head is-center">extremely easy to get started</h2>
+
+            <div class="pure-g get-started">
+                
+                <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4 wow fadeIn" data-wow-offset="160"> 
+                    
+                    <div class="panel">
+                        <i class="fa fa-rocket"></i>
+                        <h3>Action #1</h3>
+                        <p>
+                            Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.
+                        </p>
+                    </div>
+                </div>
+                <i class="fa fa-long-arrows wow fadeInDown" data-wow-delay="2s"></i>
+                <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4 wow fadeIn" data-wow-delay="0.5s" data-wow-offset="160">
+                    <div class="panel">
+                        <i class="fa fa-mobile"></i>
+                        <h3>Action #2</h3>
+                        <p>
+                            Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.
+                        </p>
+                    </div>
+                </div>
+                <i class="fa fa-long-arrows wow fadeInDown" data-wow-delay="2s"></i>
+                <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4 wow fadeIn" data-wow-delay="1s" data-wow-offset="160">
+                    <div class="panel">
+                        <i class="fa fa-th-large"></i>
+                        <h3>Action #3</h3>
+                        <p>
+                            Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.
+                        </p>
+                    </div>
+                </div>
+                <i class="fa fa-long-arrows wow fadeInDown" data-wow-delay="2s"></i>
+                <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4 wow fadeIn" data-wow-delay="1.5s" data-wow-offset="160">
+                    <div class="panel">
+                        <i class="fa fa-check-square-o"></i>
+                        <h3>Action #4</h3>
+                        <p>
+                            Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- MAIN FEATURES BLOCK -->
+        <div class="content container">
+            
+            <h2 class="content-head is-center">main features as...</h2>
+
+            <div class="pure-g features with-divider">
+
+                <div class="pure-u-1-2 divider-vert wow fadeInLeft" data-wow-offset="250">
+                    
+                    <h2 class="is-center is-uppercase">Protocol</h2>
+
+                    <div class="pure-g">
+                        
+                        <div class="l-box pure-u-1 pure-u-md-1-2 ">
+                            <h3 class="content-subhead">
+                                <i class="fa fa-check-square-o"></i>
+                                Feature #1
+                            </h3>
+                            <p>
+                                Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.
+                            </p>
+                        </div>
+                        
+                        <div class="l-box pure-u-1 pure-u-md-1-2">
+                            <h3 class="content-subhead">
+                                <i class="fa fa-check-square-o"></i>
+                                Feature #2
+                            </h3>
+                            <p>
+                                Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.
+                            </p>
+                        </div>
+                        
+                        <div class="l-box pure-u-1 pure-u-md-1-2">
+                            <h3 class="content-subhead">
+                                <i class="fa fa-check-square-o"></i>
+                                Feature #3
+                            </h3>
+                            <p>
+                                Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.
+                            </p>
+                        </div>
+                        
+                        <div class="l-box pure-u-1 pure-u-md-1-2">
+                            <h3 class="content-subhead">
+                                <i class="fa fa-check-square-o"></i>
+                                Feature #4
+                            </h3>
+                            <p>
+                                Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="pure-u-1-2 wow fadeInRight" data-wow-offset="250"> 
+                    
+                    <h2 class="is-center is-uppercase">framework</h2>
+                    
+                    <div class="pure-g">
+                        <div class="l-box pure-u-1 pure-u-md-1-2">
+                            <h3 class="content-subhead">
+                                <i class="fa fa-check-square-o"></i>
+                                Feature #1
+                            </h3>
+                            <p>
+                                Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.
+                            </p>
+                        </div>
+                        <div class="l-box pure-u-1 pure-u-md-1-2">
+                            <h3 class="content-subhead">
+                                <i class="fa fa-check-square-o"></i>
+                                Feature #2
+                            </h3>
+                            <p>
+                                Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.
+                            </p>
+                        </div>
+                        <div class="l-box pure-u-1 pure-u-md-1-2">
+                            <h3 class="content-subhead">
+                                <i class="fa fa-check-square-o"></i>
+                                Feature #3
+                            </h3>
+                            <p>
+                                Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.
+                            </p>
+                        </div>
+                        <div class="l-box pure-u-1 pure-u-md-1-2">
+                            <h3 class="content-subhead">
+                                <i class="fa fa-check-square-o"></i>
+                                Feature #4
+                            </h3>
+                            <p>
+                                Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="footer is-center">
+            <p class="copy">
+                &copy; 2015 ObjectStyle. All rights reserved. <br />
+                All code is licensed under the terms of <a href="#">BSD license</a> unless otherwise stated
+            </p>
+        </div>
+
+    </div>
+
+
+
+<script src="js/wow.min.js"></script>
+<script>
+    new WOW().init();
+</script>
+
+
+</body>
+</html>

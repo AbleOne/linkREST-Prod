@@ -1,0 +1,183 @@
+/*!
+Pure v0.6.1-pre
+Copyright 2014 Yahoo! Inc. All rights reserved.
+Licensed under the BSD License.
+https://github.com/yahoo/pure/blob/master/LICENSE.md
+*/
+/* -- SPECIFC LINKREST STYLES COLLECTOR ------------------------------------- */
+/* ---------------------------------------------------------------------- 
+	LINKREST BASE STYLES
+---------------------------------------------------------------------- */
+@-webkit-viewport {
+  width: device-width;
+}
+
+@-moz-viewport {
+  width: device-width;
+}
+
+@-ms-viewport {
+  width: device-width;
+}
+
+@-o-viewport {
+  width: device-width;
+}
+
+@viewport {
+  width: device-width;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 80em;
+  margin: 0 auto;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+a {
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  color: #ca432b;
+  text-decoration: none;
+}
+
+.fa {
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  color: #353535;
+}
+
+html,
+button,
+input,
+select,
+textarea,
+a,
+p,
+.pure-g [class*="pure-u"] {
+  font-family: 'Lato', sans-serif;
+}
+
+p {
+  margin: 0 0 20px;
+  line-height: 1.5;
+  color: #676767;
+}
+
+.is-uppercase {
+  text-transform: uppercase;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.pure-g.with-divider .pure-u-1-2 {
+  padding-left: 2em;
+  padding-right: 1em;
+}
+.pure-g.with-divider .pure-u-1-2:first-child {
+  padding-left: 1em;
+  padding-right: 2em;
+}
+
+.divider-vert {
+  border-right: 1px solid #DBDADA;
+}
+
+.panel {
+  background: white;
+  padding: 2.5em 2em 1em;
+  margin: 0 1em;
+  text-align: center;
+}
+.panel h3 {
+  margin-bottom: .5em;
+  margin-top: 1.5em;
+}
+.panel .fa {
+  font-size: 55px;
+  color: #a0a3a4;
+}
+
+.get-started {
+  position: relative;
+}
+.get-started .fa-long-arrows {
+  font-size: 1.5em;
+  width: 100%;
+  text-align: center;
+  color: #a0a3a4;
+}
+.get-started .fa-long-arrows:before {
+  content: "\f175";
+}
+
+.features h2 {
+  color: #4a4a4a;
+}
+
+.fork-on-github-btn {
+  position: fixed;
+  top: 88px;
+  right: 0;
+  border: 0;
+  z-index: 5;
+}
+
+.footer {
+  padding: 1.4em 1em 1em;
+  color: #6B6B6B;
+}
+.footer .copy {
+  font-size: .75em;
+  margin-bottom: 0;
+}
+
+/*
+ * -- TABLET (AND DOWN) MEDIA QUERIES --
+ * On tablets and other medium-sized devices, we want to customize some
+ * of the mobile styles.
+ */
+@media (max-width: 48em) {
+  .pure-menu-horizontal .pure-menu-list {
+    display: block;
+  }
+
+  .fork-on-github-btn {
+    top: 80px;
+    display: none;
+  }
+}
+/*
+ * -- TABLET (AND UP) MEDIA QUERIES --
+ */
+@media (min-width: 48em) {
+  .get-started .fa-long-arrows {
+    width: auto;
+    position: absolute;
+    top: 50%;
+    margin-top: -.3em;
+    margin-left: -.4em;
+  }
+  .get-started .fa-long-arrows:before {
+    content: "\f178";
+  }
+}
