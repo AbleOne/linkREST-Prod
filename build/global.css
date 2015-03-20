@@ -73,6 +73,25 @@ p,
   font-family: 'Lato', sans-serif;
 }
 
+.text-vert-block {
+  height: 100%;
+  /* The ghost, nudged to maintain perfect centering */
+  /* The element to be centered, can
+  also be of any width and height */
+}
+.text-vert-block:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -0.25em;
+  /* Adjusts for spacing */
+}
+.text-vert-block .vert-centered {
+  display: inline-block;
+  vertical-align: middle;
+}
+
 p {
   margin: 0 0 20px;
   line-height: 1.5;
@@ -117,6 +136,59 @@ ul {
   color: #a0a3a4;
 }
 
+.promo,
+.promo > .pure-g,
+.principle,
+.welcome {
+  height: 100%;
+}
+
+.promo .pure-u-md-1-2 {
+  padding-left: 3.8em;
+  height: 100%;
+}
+.promo .pure-u-md-1-2:first-child {
+  padding-right: 2.5em;
+}
+
+.principle {
+  background-color: #e74c3c;
+  background-image: url("../img/principle-cl.png");
+  background-repeat: no-repeat;
+  background-position: center right;
+}
+
+.welcome {
+  background: #e95c4e;
+}
+.welcome h1 {
+  font-size: 42px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  color: white;
+  line-height: 50px;
+  margin: 0;
+  width: 100%;
+}
+.welcome h1 > span {
+  float: left;
+}
+
+.go {
+  background: url(../img/go.png) no-repeat center center;
+  display: inline-block;
+  width: 25px;
+  height: 12px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  opacity: .3;
+}
+.go:hover {
+  opacity: 1;
+}
+
 .get-started {
   position: relative;
 }
@@ -140,6 +212,7 @@ ul {
   right: 0;
   border: 0;
   z-index: 5;
+  display: none;
 }
 
 .footer {

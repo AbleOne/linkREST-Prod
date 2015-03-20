@@ -10,6 +10,8 @@
     
 
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:300,700' rel='stylesheet' type='text/css'>
+
     <link rel="stylesheet" href="build/pure-min.css">
 
     <!--[if lte IE 8]>
@@ -35,7 +37,7 @@
 
 
 
-    <!-- MAIN NAV -->
+    <!-- Main Nav -->
     <div class="header">
         <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
             <div class="container">
@@ -45,14 +47,13 @@
 
                 <ul class="pure-menu-list">
                     <!-- need to add .pure-menu-selected to `li` for `selected state` -->
-                    <li class="pure-menu-item"><a href="https://github.com/nhl/link-rest/wiki" class="pure-menu-link">Documentation</a></li>
-                    <li class="pure-menu-item"><a href="#" class="pure-menu-link">Examples</a></li>
+                    <li class="pure-menu-item"><a href="#get-started" class="pure-menu-link">Get started</a></li>
+                    <li class="pure-menu-item"><a href="#features" class="pure-menu-link">Features</a></li>
+                    <li class="pure-menu-item"><a href="https://github.com/nhl/link-rest/wiki" class="pure-menu-link">Docs</a></li>
+                    <li class="pure-menu-item"><a href="https://github.com/nhl/link-rest" class="pure-menu-link">Fork on github</a></li>
                 </ul>
             </div>
         </div>
-        
-        <!-- FORK ON GITHUB -->
-        <a class="fork-on-github-btn" href="https://github.com/you"><img src="https://camo.githubusercontent.com/52760788cde945287fbb584134c4cbc2bc36f904/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f77686974655f6666666666662e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png"></a>
 
     </div>
 
@@ -61,35 +62,23 @@
         <div class="promo">
             <div class="pure-g">
                 <div class="pure-u-md-1-2">
-                    
+                    <div class="principle"><!-- linkREST PRINCIPLE SCHEME --></div>
                 </div>
-                <div class="pure-u-md-1-2" style="display:none;">
-                    <h3>Look at the code and try to experiment with it</h3>
-                    <pre>import org.glassfish.jersey.server.ResourceConfig;
-
-                    @ApplicationPath("/")
-                    public class MyApp extends ResourceConfig {
-
-                        public MyApp() {
-
-                            // Start Cayenne
-                            ServerRuntime cayenneRuntime  = new ServerRuntime("my-cayenne.xml");
-
-                            // Start LinkRest with default settings.
-                            // (check out LinkRestBuilder API for more configuration options)
-                            register(LinkRestBuilder.build(cayenneRuntime));
-                        }
-                    }</pre>
+                <div class="pure-u-md-1-2 welcome">
+                    <div class="text-vert-block">
+                        <h1 class="vert-centered"><span class="is-center">...a flexible model-driven<br />REST data services<br /><strong>protocol</strong> and <strong>framework</strong></span></h1>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="content-wrapper">
+    <div class="content-wrapper" id="get-started">
         
         <!-- GET STARTED ICONS + TEXTUAL BLOCK -->
         <div class="content container">
-            
+            <a href="#get-started" class="go"></a>
+
             <h2 class="content-head is-center">extremely easy to get started</h2>
 
             <div class="pure-g get-started">
@@ -140,7 +129,7 @@
 
 
         <!-- MAIN FEATURES BLOCK -->
-        <div class="content container">
+        <div class="content container" id="features">
             
             <h2 class="content-head is-center">main features as...</h2>
 
