@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="A layout example that shows off a responsive product landing page.">
 
-    <title>linkREST &ndash; flexible model-driven REST data services protocol and framework</title>
+    <title>linkREST</title>
 
     
 
@@ -32,6 +32,10 @@
 
     <link rel="stylesheet" href="build/animate-min.css">
 
+    <style>
+        @-ms-viewport{width:device-width !important;}
+    </style>
+
 </head>
 <body>
 
@@ -50,7 +54,7 @@
                     <li class="pure-menu-item"><a href="#get-started" class="pure-menu-link">Get started</a></li>
                     <li class="pure-menu-item"><a href="#features" class="pure-menu-link">Features</a></li>
                     <li class="pure-menu-item"><a href="https://github.com/nhl/link-rest/wiki" class="pure-menu-link">Docs</a></li>
-                    <li class="pure-menu-item"><a href="https://github.com/nhl/link-rest" class="pure-menu-link">Fork on github</a></li>
+                    <li class="pure-menu-item fork-on-github-btn"><a href="#" class="pure-menu-link">Fork on github</a></li>
                 </ul>
             </div>
         </div>
@@ -61,20 +65,26 @@
     <div class="promo-container">
         <div class="promo">
             <div class="pure-g">
-                <div class="pure-u-md-1-2">
-                    <div class="principle"><!-- linkREST PRINCIPLE SCHEME --></div>
+                <div class="pure-u-1 pure-u-md-1-2">
+                    <div class="principle">
+                        <div class="text-vert-block">
+                            <img src="img/principle-db.png" class="vert-centered" alt="linkREST principle scheme" />
+                        </div>
+                    </div>
                 </div>
-                <div class="pure-u-md-1-2 welcome">
-                    <div class="text-vert-block">
-                        <h1 class="vert-centered"><span class="is-center">...a flexible model-driven<br />REST data services<br /><strong>protocol</strong> and <strong>framework</strong></span></h1>
+                <div class="pure-u-1 pure-u-md-1-2">
+                    <div class="welcome">
+                        <div class="text-vert-block">
+                            <h1 class="vert-centered"><span class="is-center">...a flexible model-driven<br />REST data services<br /><strong>protocol</strong> and <strong>framework</strong></span></h1>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="content-wrapper" id="get-started">
-        
+    <div class="content-wrapper">
+        <span id="get-started"></span>
         <!-- GET STARTED ICONS + TEXTUAL BLOCK -->
         <div class="content container">
             <a href="#get-started" class="go"></a>
@@ -83,7 +93,7 @@
 
             <div class="pure-g get-started">
                 
-                <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4 wow fadeIn" data-wow-offset="160"> 
+                <div class="l-box pure-u-1 pure-u-lg-1-4 wow fadeIn" data-wow-offset="160"> 
                     
                     <div class="panel">
                         <i class="fa fa-rocket"></i>
@@ -94,7 +104,7 @@
                     </div>
                 </div>
                 <i class="fa fa-long-arrows wow fadeInDown" data-wow-delay="2s"></i>
-                <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4 wow fadeIn" data-wow-delay="0.5s" data-wow-offset="160">
+                <div class="l-box pure-u-1 pure-u-lg-1-4 wow fadeIn" data-wow-delay="0.5s" data-wow-offset="160">
                     <div class="panel">
                         <i class="fa fa-mobile"></i>
                         <h3>Action #2</h3>
@@ -104,7 +114,7 @@
                     </div>
                 </div>
                 <i class="fa fa-long-arrows wow fadeInDown" data-wow-delay="2s"></i>
-                <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4 wow fadeIn" data-wow-delay="1s" data-wow-offset="160">
+                <div class="l-box pure-u-1 pure-u-lg-1-4 wow fadeIn" data-wow-delay="1s" data-wow-offset="160">
                     <div class="panel">
                         <i class="fa fa-th-large"></i>
                         <h3>Action #3</h3>
@@ -114,7 +124,7 @@
                     </div>
                 </div>
                 <i class="fa fa-long-arrows wow fadeInDown" data-wow-delay="2s"></i>
-                <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4 wow fadeIn" data-wow-delay="1.5s" data-wow-offset="160">
+                <div class="l-box pure-u-1 pure-u-lg-1-4 wow fadeIn" data-wow-delay="1.5s" data-wow-offset="160">
                     <div class="panel">
                         <i class="fa fa-check-square-o"></i>
                         <h3>Action #4</h3>
@@ -127,9 +137,9 @@
             </div>
         </div>
 
-
         <!-- MAIN FEATURES BLOCK -->
-        <div class="content container" id="features">
+        <div class="content container">
+            <span id="features"></span>
             
             <h2 class="content-head is-center">main features as...</h2>
 

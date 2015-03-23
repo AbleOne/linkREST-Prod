@@ -37,6 +37,7 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
 .container {
   max-width: 80em;
   margin: 0 auto;
+  position: relative;
 }
 
 body {
@@ -143,23 +144,33 @@ ul {
   height: 100%;
 }
 
-.promo .pure-u-md-1-2 {
-  padding-left: 3.8em;
-  height: 100%;
+.promo-container {
+  position: relative;
+  height: auto;
 }
-.promo .pure-u-md-1-2:first-child {
-  padding-right: 2.5em;
+.promo-container .promo .pure-u-md-1-2 {
+  padding: 0 1em;
+  background: #e95c4e;
+}
+.promo-container .promo .pure-u-md-1-2:first-child {
+  background: #e74c3c;
+}
+
+.content-wrapper {
+  position: relative;
+  top: auto;
 }
 
 .principle {
-  background-color: #e74c3c;
-  background-image: url("../img/principle-cl.png");
-  background-repeat: no-repeat;
-  background-position: center right;
+  text-align: center;
+  padding: 4em 0;
+}
+.principle img {
+  max-width: 100%;
 }
 
 .welcome {
-  background: #e95c4e;
+  padding: 3em 0;
 }
 .welcome h1 {
   font-size: 42px;
@@ -169,9 +180,7 @@ ul {
   line-height: 50px;
   margin: 0;
   width: 100%;
-}
-.welcome h1 > span {
-  float: left;
+  text-align: center;
 }
 
 .go {
@@ -184,6 +193,7 @@ ul {
   right: 0;
   margin: 0 auto;
   opacity: .3;
+  text-align: center;
 }
 .go:hover {
   opacity: 1;
@@ -206,13 +216,11 @@ ul {
   color: #4a4a4a;
 }
 
-.fork-on-github-btn {
-  position: fixed;
-  top: 88px;
-  right: 0;
-  border: 0;
-  z-index: 5;
-  display: none;
+#get-started,
+#features {
+  position: absolute;
+  top: 0;
+  visibility: hidden;
 }
 
 .footer {
@@ -229,20 +237,68 @@ ul {
  * On tablets and other medium-sized devices, we want to customize some
  * of the mobile styles.
  */
+/*
+ * -- TABLET (AND DOWN) MEDIA QUERIES --
+ * On tablets and other medium-sized devices, we want to customize some
+ * of the mobile styles.
+ */
 @media (max-width: 48em) {
   .pure-menu-horizontal .pure-menu-list {
     display: block;
   }
 
   .fork-on-github-btn {
-    top: 80px;
-    display: none;
+    display: none !important;
+  }
+
+  .go {
+    width: 100%;
+    position: relative;
+    top: 1.5%;
   }
 }
 /*
  * -- TABLET (AND UP) MEDIA QUERIES --
  */
 @media (min-width: 48em) {
+  #get-started,
+  #features {
+    top: -87px;
+  }
+
+  .promo-container {
+    position: fixed;
+    height: 521px;
+  }
+  .promo-container .promo .pure-u-md-1-2 {
+    padding: 0 3.8em 0 3.4em;
+    height: 100%;
+  }
+  .promo-container .promo .pure-u-md-1-2:first-child {
+    padding-right: 2.5em;
+  }
+
+  .principle {
+    padding: 0;
+    text-align: right;
+  }
+
+  .welcome {
+    padding: 0;
+  }
+  .welcome h1 > span {
+    float: left;
+  }
+
+  .content-wrapper {
+    position: absolute;
+    top: 521px;
+  }
+}
+/*
+ * -- TABLET (AND UP) MEDIA QUERIES --
+ */
+@media (min-width: 64em) {
   .get-started .fa-long-arrows {
     width: auto;
     position: absolute;
