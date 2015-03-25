@@ -167,6 +167,9 @@ ul {
 }
 .principle img {
   max-width: 100%;
+  left: -.8em;
+  position: relative;
+  top: .6em;
 }
 
 .welcome {
