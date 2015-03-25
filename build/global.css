@@ -167,9 +167,6 @@ ul {
 }
 .principle img {
   max-width: 100%;
-  left: -.8em;
-  position: relative;
-  top: .6em;
 }
 
 .welcome {
@@ -284,6 +281,11 @@ ul {
   .principle {
     padding: 0;
     text-align: right;
+  }
+  .principle img {
+    left: -.8em;
+    position: relative;
+    top: .6em;
   }
 
   .welcome {
