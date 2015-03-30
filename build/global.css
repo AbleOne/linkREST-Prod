@@ -119,7 +119,16 @@ ul {
 }
 
 .divider-vert {
-  border-right: 1px solid #DBDADA;
+  position: relative;
+}
+.divider-vert:before {
+  content: "";
+  position: absolute;
+  top: 77px;
+  bottom: 0;
+  right: 0;
+  width: 1px;
+  background: #dbdbdb;
 }
 
 .panel {
