@@ -11,23 +11,18 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
 @-webkit-viewport {
   width: device-width;
 }
-
 @-moz-viewport {
   width: device-width;
 }
-
 @-ms-viewport {
   width: device-width;
 }
-
 @-o-viewport {
   width: device-width;
 }
-
 @viewport {
   width: device-width;
 }
-
 *,
 *:after,
 *:before {
@@ -38,6 +33,10 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
   max-width: 80em;
   margin: 0 auto;
   position: relative;
+  border-top: 1px solid #d7d7d7;
+}
+.container:first-child {
+  border-top: 0;
 }
 
 body {
@@ -52,6 +51,11 @@ a {
   transition: all 0.2s ease-out;
   color: #ca432b;
   text-decoration: none;
+}
+
+pre {
+  margin: 0;
+  line-height: 1.5;
 }
 
 .fa {
@@ -103,19 +107,14 @@ p {
   text-transform: uppercase;
 }
 
+.is-nowrap {
+  white-space: nowrap;
+}
+
 ul {
   list-style: none;
   margin: 0;
   padding: 0;
-}
-
-.pure-g.with-divider .pure-u-1-2 {
-  padding-left: 2em;
-  padding-right: 1em;
-}
-.pure-g.with-divider .pure-u-1-2:first-child {
-  padding-left: 1em;
-  padding-right: 2em;
 }
 
 .divider-vert {
@@ -143,7 +142,7 @@ ul {
 }
 .panel .fa {
   font-size: 55px;
-  color: #a0a3a4;
+  color: #A0A3A4;
 }
 
 .promo,
@@ -211,11 +210,75 @@ ul {
 .get-started {
   position: relative;
 }
+.get-started .get-started-env {
+  max-width: 63em;
+  width: 100%;
+  letter-spacing: normal;
+  margin: 5.8em auto 5.688em;
+  border-radius: .25em;
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.4);
+}
+.get-started .get-started-env .env-wndw-top {
+  height: 2em;
+  border-radius: 0.25em 0.25em 0 0;
+  background-color: #d4d8d8;
+  padding: 0.563em 0.750em;
+}
+.get-started .get-started-env .env-wndw-top .btns {
+  height: 0.875em;
+  width: 0.875em;
+  border-radius: 50%;
+  float: left;
+  margin-right: .5em;
+}
+.get-started .get-started-env .env-wndw-top .btns.red {
+  background-color: #c0392b;
+}
+.get-started .get-started-env .env-wndw-top .btns.yellow {
+  background-color: #efa42c;
+}
+.get-started .get-started-env .env-wndw-top .btns.green {
+  background-color: #28ae61;
+}
+.get-started .get-started-env .step-counter {
+  height: 1.5em;
+  width: 1.5em;
+  display: inline-block;
+  position: absolute;
+  top: -4.3em;
+  left: 0;
+  border: 1px solid #c9c9c9;
+  border-radius: 50%;
+  line-height: 1.4;
+  color: #CFCFCF;
+  cursor: pointer;
+  font-size: 22px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+}
+.get-started .get-started-env .step-counter:before {
+  content: "";
+  display: block;
+  height: 2.5em;
+  width: 1px;
+  position: absolute;
+  border-right: 1px dashed #c9c9c9;
+  left: 50%;
+  top: 100%;
+  z-index: -1;
+}
+.get-started .get-started-env pre.prettyprint {
+  background: transparent;
+}
+.get-started .get-started-env pre .tag,
+.get-started .get-started-env pre .kwd {
+  font-weight: normal;
+}
 .get-started .fa-long-arrows {
   font-size: 1.5em;
   width: 100%;
   text-align: center;
-  color: #a0a3a4;
+  color: #A0A3A4;
 }
 .get-started .fa-long-arrows:before {
   content: "\f175";
@@ -223,6 +286,12 @@ ul {
 
 .features h2 {
   color: #4a4a4a;
+  margin-top: 1.8em;
+  font-size: 1.125em;
+  font-weight: 400;
+}
+.features h2 + .pure-g {
+  margin-top: 3.375em;
 }
 
 #get-started,
@@ -233,12 +302,12 @@ ul {
 }
 
 .footer {
-  padding: 1.4em 1em 1em;
   color: #6B6B6B;
 }
 .footer .copy {
   font-size: .75em;
   margin-bottom: 0;
+  color: #9e9e9e;
 }
 
 /*
@@ -272,7 +341,11 @@ ul {
 @media (min-width: 48em) {
   #get-started,
   #features {
-    top: -87px;
+    top: -60px;
+  }
+
+  #features + .content-head {
+    margin-top: 1.6em;
   }
 
   .promo-container {
@@ -324,3 +397,228 @@ ul {
     content: "\f178";
   }
 }
+/* ---------------------------------------------------------------------- 
+    TABS WITH RADIO AND CSS
+    (+): 0 js
+    (-): rather static
+---------------------------------------------------------------------- */
+.code-tabs {
+  letter-spacing: normal;
+  border-left: 24px solid #2b303b;
+  border-radius: 0 0 .25em .25em;
+  background-color: #53575e;
+}
+.code-tabs section {
+  display: none;
+  padding: 20px 0 10px .25em;
+  background-color: #3a3f49;
+  margin-left: -5px;
+  padding: 2.3em 1.875em;
+  border-radius: 0 0 .25em 0;
+}
+.code-tabs > input[type=radio] {
+  display: none;
+}
+.code-tabs > label {
+  display: inline-block;
+  position: relative;
+  margin: 0 0 0 -5px;
+  text-align: center;
+}
+.code-tabs > label .tab-text {
+  padding: 15px 22px;
+  display: block;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.12em;
+  color: #858688;
+  background-color: #53575e;
+}
+.code-tabs > label .tab-text br {
+  display: none;
+}
+.code-tabs > label .tab-text:hover {
+  cursor: pointer;
+  color: #78797b;
+  background-color: #414652;
+}
+.code-tabs > input[type=radio]:checked + label .tab-text {
+  color: #bebfc1;
+  background: #3a3f49;
+}
+.code-tabs > input[type=radio]:checked + label .step-counter {
+  color: #3a3f49;
+  border-color: #3a3f49;
+}
+.code-tabs > input[type=radio]:checked + label .step-counter:before {
+  border-color: #3a3f49;
+}
+.code-tabs #tab1:checked ~ #content1,
+.code-tabs #tab2:checked ~ #content2,
+.code-tabs #tab3:checked ~ #content3,
+.code-tabs #tab4:checked ~ #content4 {
+  display: block;
+}
+
+@media screen and (min-width: 769px) {
+  .is-md-hidden {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 63.938em) {
+  .code-tabs > label {
+    /* font-size: 14px; */
+    width: 25%;
+  }
+  .code-tabs > label .tab-text br {
+    display: inline;
+  }
+}
+@media screen and (max-width: 48em) {
+  .code-tabs > label {
+    height: 1px;
+    float: left;
+  }
+  .code-tabs > label .tab-text {
+    display: none;
+  }
+}
+/* PRETTYPRINT really needed STYLES */
+ol.linenums {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+li.L0,
+li.L1,
+li.L2,
+li.L3,
+li.L5,
+li.L6,
+li.L7,
+li.L8 {
+  list-style-type: none;
+}
+
+/* SUNBURST */
+/* Pretty printing styles. Used with prettify.js. */
+/* Vim sunburst theme by David Leibovic */
+pre .str, code .str {
+  color: #65B042;
+}
+
+/* string  - green */
+pre .kwd, code .kwd {
+  color: #E28964;
+}
+
+/* keyword - dark pink */
+pre .com, code .com {
+  color: #AEAEAE;
+  font-style: italic;
+}
+
+/* comment - gray */
+pre .typ, code .typ {
+  color: #89bdff;
+}
+
+/* type - light blue */
+pre .lit, code .lit {
+  color: #3387CC;
+}
+
+/* literal - blue */
+pre .pun, code .pun {
+  color: #fff;
+}
+
+/* punctuation - white */
+pre .pln, code .pln {
+  color: #fff;
+}
+
+/* plaintext - white */
+pre .tag, code .tag {
+  color: #89bdff;
+}
+
+/* html/xml tag    - light blue */
+pre .atn, code .atn {
+  color: #bdb76b;
+}
+
+/* html/xml attribute name  - khaki */
+pre .atv, code .atv {
+  color: #65B042;
+}
+
+/* html/xml attribute value - green */
+pre .dec, code .dec {
+  color: #3387CC;
+}
+
+/* decimal - blue */
+pre.prettyprint {
+  /* white-space: pre-wrap; */
+}
+
+/* Specify class=linenums on a pre to get line numbering */
+ol.linenums {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #AEAEAE;
+}
+
+/* IE indents via margin-left */
+li.L0, li.L1, li.L2, li.L3, li.L5, li.L6, li.L7, li.L8 {
+  list-style-type: none;
+}
+
+/* Alternate shading for lines */
+@media print {
+  pre .str, code .str {
+    color: #060;
+  }
+
+  pre .kwd, code .kwd {
+    color: #006;
+    font-weight: bold;
+  }
+
+  pre .com, code .com {
+    color: #600;
+    font-style: italic;
+  }
+
+  pre .typ, code .typ {
+    color: #404;
+    font-weight: bold;
+  }
+
+  pre .lit, code .lit {
+    color: #044;
+  }
+
+  pre .pun, code .pun {
+    color: #440;
+  }
+
+  pre .pln, code .pln {
+    color: #000;
+  }
+
+  pre .tag, code .tag {
+    color: #006;
+    font-weight: bold;
+  }
+
+  pre .atn, code .atn {
+    color: #404;
+  }
+
+  pre .atv, code .atv {
+    color: #060;
+  }
+}
+
+/*# sourceMappingURL=global.css.map */
