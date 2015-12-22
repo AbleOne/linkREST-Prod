@@ -52,7 +52,7 @@
                     <li class="pure-menu-item"><a href="#get-started" class="pure-menu-link">Getting Started</a></li>
                     <li class="pure-menu-item"><a href="#features" class="pure-menu-link">Features</a></li>
                     <li class="pure-menu-item"><a href="https://github.com/nhl/link-rest/wiki" class="pure-menu-link">Documentation</a></li>
-                    <li class="pure-menu-item fork-on-github-btn"><a href="https://github.com/nhl/link-rest" class="pure-menu-link">Fork on GitHub</a></li>
+                    <li class="pure-menu-item fork-on-github-btn"><a href="https://github.com/nhl/link-rest" class="pure-menu-link">GitHub <i class="fa fa-code-fork fa-inverse"></i></a></li>
                 </ul>
             </div>
         </div>
@@ -61,7 +61,7 @@
 
     <!-- PROMO BLOCK -->
     <div class="promo-container">
-        <div class="promo">
+        <div class="promo container">
             <div class="pure-g">
                 <div class="pure-u-1 pure-u-md-1-2">
                     <div class="principle">
@@ -117,7 +117,7 @@
                         <input id="tab3" type="radio" name="tabs">
                         <label for="tab3">
                             <span class="step-counter">3</span>
-                            <span class="tab-text">Write a JAX-RS<br />Resourcy</span>
+                            <span class="tab-text">Write a JAX-RS<br />Resource</span>
                         </label>
 
                         <input id="tab4" type="radio" name="tabs">
@@ -166,14 +166,14 @@ public class JaxRsApplication extends ResourceConfig {
 </code></pre>
                                 <pre class="prettyprint"><code>@Path("myentity")
 @Produces(MediaType.APPLICATION_JSON)
-public class DomainResource {
+public class MyEntityResource {
     
     @Context
     private Configuration config;
 
     @GET
-    public DataResponse &lt;Domain&gt; getAll(@Context UriInfo uriInfo) {
-        return LinkRest.select(Domain.class, config).uri(uriInfo).select();
+    public DataResponse&lt;MyEntity&gt; getAll(@Context UriInfo uriInfo) {
+        return LinkRest.select(MyEntity.class, config).uri(uriInfo).select();
     }
 }</code></pre>
                             </div>
@@ -194,7 +194,28 @@ public class DomainResource {
 
             </div>
         </div>
+        <!-- MAIN FEATURES BLOCK -->
+        <div class="full-width dark-section">
+            <div class="content container">
+                <span id="video"></span>
 
+                <h2 class="content-head is-center">video presentation</h2>
+
+                <div class="pure-g">
+
+                    <div class="pure-u-1 "> <!-- could bу + .divider-vert -->
+                            
+                        <div class="video-container-holder">
+                            <div class="video-container">
+                                <iframe class="yt-player" id="linkrest-presentation" src="//www.youtube.com/embed/Zwf9Xy90-8s?enablejsapi=1&modestbranding=1&rel=0&start=24" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                            <span class="play-btn"><i class="fa fa-play"></i></span>
+                        </div>    
+
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- MAIN FEATURES BLOCK -->
         <div class="content container">
             <span id="features"></span>
@@ -271,14 +292,15 @@ public class DomainResource {
         <div class="footer is-center">
             <div class="container">
                 <p class="copy">
-                    &copy; 2015 ObjectStyle. All rights reserved. <br />
-                    All code is licensed under the terms of <a href="#">BSD license</a> unless otherwise stated
+                    &copy; 2015 NHL, ObjectStyle and other LinkRest Developers.<br />
                 </p>
             </div>
         </div>
 
     </div>
 
+    <script src="js/jquery.min.js"></script>
+    <script src="js/linkrest-app.js"></script>
 
 </body>
 </html>
